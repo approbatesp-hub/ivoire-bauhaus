@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Layout from "./components/Layout";
 import ErrorPage from "./routes/ErrorPage";
-import Home from "./routes/Home.Jsx";
+import Home from "./routes/Home.jsx";
 import Contact from "./routes/Contact";
 import CommunicationPub from "./routes/CommunicationPub";
 import PromotionImmobiliere from "./routes/PromotionImmobiliere";
@@ -42,9 +42,9 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <DashboardAdmin /> },
-      { path: "/admin/editiImages", element: <EditImages /> },
-      { path: "/admin/editText", element: <EditText /> },
-      { path: "/admin/editerMDP", element: <EditPW /> },
+      { path: "editImages", element: <EditImages /> },
+      { path: "editText", element: <EditText /> },
+      { path: "editerMDP", element: <EditPW /> },
     ],
   },
 ]);
