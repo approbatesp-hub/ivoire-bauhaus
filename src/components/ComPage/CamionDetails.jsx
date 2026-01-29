@@ -14,13 +14,13 @@ import {
 } from "lucide-react";
 import { galleryImages2 } from "../../utils/constant";
 import ModalGallery from "../ImmoPage/ModalGallery";
-import VideoCam from "../../assets/videoCamion.mp4";
 
 const CamionDetails = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [imageSelected, setImageSelected] = useState(0);
   const [showCarDetails, setShowCarDetails] = useState(false);
+  const VideoCam = "/videoCamion.mp4";
 
   return (
     <section className="lg:max-w-7xl mx-auto px-6 pt-10 pb-10 lg:pb-20 space-y-10 lg:space-y-20">
