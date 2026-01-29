@@ -1,0 +1,90 @@
+{
+  "promotion": {
+    "mainTitle": "Construire aujourd’hui, valoriser demain",
+    "descriptionOne": "Nous développons des projets immobiliers durables, modernes et rentables, pensés pour répondre aux exigences des investisseurs, des familles et des entreprises.",
+    "descriptionTwo": "Notre mission : bâtir des espaces de vie de qualité, fiables et pérennes.",
+    "keyPoints": [
+      {
+        "title": "Un Accompagnement Sur-Mesure",
+        "description": "De la conception des plans à la remise des clés, nous sommes votre partenaire unique. Nous écoutons vos besoins pour créer des espaces qui vous ressemblent vraiment."
+      },
+      {
+        "title": "Qualité & Innovation",
+        "description": "Nous utilisons des techniques de construction modernes et des matériaux durables pour garantir la pérennité de votre investissement et un confort thermique optimal."
+      },
+      {
+        "title": "Garantie & Sérénité",
+        "description": "Bénéficiez de toutes les garanties constructeur et d'un suivi rigoureux. Investissez en toute confiance dans un patrimoine immobilier solide et sécurisé."
+      }
+    ]
+  },
+  "communication": {
+    "mainTitle": "Communication & Publicité",
+    "description": "Nous mettons à votre disposition des supports d’affichage performants – panneaux, bâches, bus, camions LED – afin de vous offrir une visibilité optimale pour vos marques. Nous assurons un suivi rigoureux, de la réservation de l’emplacement à la mise en place de la campagne, pour garantir une diffusion conforme aux objectifs définis. Notre approche allie précision technique et choix stratégique des emplacements pour des campagnes visibles, efficaces et mémorables.",
+    "keyPoints": [
+      "Flotte de Camions LED haute définition",
+      "Réseau de Panneaux Stratégiques",
+      "Gestion de campagne clé en main"
+    ]
+  },
+  "about": {
+    "mainTitle": "À propos d'IVOIRE BAUHAUS",
+    "descriptionOne": "IVOIRE BAUHAUS est un groupe multiservices structuré autour de plusieurs pôles complémentaires : la vente de terrains, la promotion immobilière et la régie publicitaire. Nous accompagnons particuliers, entreprises et institutions dans leurs projets, de la conception à la réalisation, en alliant expertise technique, vision stratégique et qualité d’exécution.",
+    "descriptionTwo": "Notre pôle immobilier développe des opérations innovantes et durables, tandis que notre régie publicitaire propose des solutions d’affichage à fort impact – panneaux, bâches, bus, camions LED – implantées dans des emplacements stratégiques. Notre mission : créer de la valeur, bâtir des projets solides et offrir à nos clients une visibilité qui compte."
+  }
+}
+
+
+
+
+<aside
+          className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl transition-transform duration-500 ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* DRAWER HEADER */}
+          <div className="flex items-center justify-between p-6 ">
+            <div className="flex items-center gap-3">
+              <img src={Logo} className="w-8 h-8" alt="logo" />
+              <span className="font-bold text-primary text-lg">
+                Ivoire Bauhaus
+              </span>
+            </div>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="text-2xl text-gray-400 hover:text-primary transition"
+            >
+              ✕
+            </button>
+          </div>
+
+          {/* MOBILE LINKS */}
+          <ul className="flex flex-col gap-6 p-8 text-lg font-medium">
+            {navLinks.map((item, index) => (
+              <li key={index}>
+                <NavLink
+                  to={item.path}
+                  onClick={() => setMenuOpen(false)}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-primary font-bold"
+                      : "text-gray-700 hover:text-primary transition"
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+
+          {/* MOBILE CTA */}
+          <div className="px-8 mt-auto pb-8">
+            <Link
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="block text-center bg-primary text-white py-4 rounded-2xl font-bold hover:opacity-90 transition shadow-lg"
+            >
+              Contactez-nous
+            </Link>
+          </div>
+        </aside>
