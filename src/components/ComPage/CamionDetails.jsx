@@ -27,11 +27,11 @@ const CamionDetails = () => {
       {/* VISION */}
       <div className="grid md:grid-cols-3 gap-5 lg:gap-10 items-center">
         <div className="col-span-1 relative">
-          <h2 className="text-teal-500 font-black text-3xl lg:text-5xl opacity-20 uppercase -z-10">
+          <h2 className="text-teal-500  font-black text-3xl lg:text-5xl opacity-20 uppercase -z-10">
             Vision
           </h2>
           <h3 className="text-xl lg:text-2xl font-bold text-slate-900 -mt-8 relative z-10">
-            Une Approche Concrète
+            Une Approche Concrète {""}
           </h3>
         </div>
         <p className="md:col-span-2 text-slate-600 lg:text-lg leading-relaxed border-l-4 border-teal-500 pl-6 italic">
