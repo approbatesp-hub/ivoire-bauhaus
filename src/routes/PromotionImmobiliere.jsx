@@ -18,7 +18,6 @@ import ModalGallery from "../components/ImmoPage/ModalGallery";
 import ModalContact from "../components/ImmoPage/ModalContact";
 import Localisation from "../components/ImmoPage/Localisation";
 import Gallerie from "../components/ImmoPage/Gallerie";
-import { galleryImages } from "../utils/constant";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllImages } from "../utils/hooks";
 import { setImages } from "../redux/bauhaus";
@@ -29,7 +28,7 @@ const PromotionPage = () => {
   const { imagesRedux } = useSelector((state) => state.projet);
 
   const imageImmoPage = imagesRedux.filter(
-    (img) => img.folder === "promotion_immobiliere"
+    (img) => img.folder === "promotion_immobiliere",
   );
 
   useEffect(() => {
@@ -430,7 +429,7 @@ const PromotionPage = () => {
           setModalOpen={setModalOpen}
           handleImageClick={handleImageClick}
           imageSelected={imageSelected}
-          galleryImages={galleryImages}
+          galleryImages={imageImmoPage}
         />
       )}
 

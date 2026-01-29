@@ -6,6 +6,7 @@ const ModalGallery = ({
   imageSelected,
   galleryImages,
 }) => {
+  console.log(galleryImages);
   return (
     <div>
       <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 backdrop-blur-sm">
@@ -24,14 +25,14 @@ const ModalGallery = ({
           </button>
           <div className="lg:h-[70vh] lg:w-[50vw] w-[70vw] h-[40vh]  ">
             <img
-              src={galleryImages[imageSelected]?.url}
+              src={galleryImages?.[imageSelected].publicUrl}
               className="w-full h-full object-cover rounded-lg"
               alt=""
             />
           </div>
           <button
             className=" w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white bg-opacity-20 hover:bg-opacity-40  transition-all flex items-center justify-center disabled:bg-slate-200/50 disabled:text-black/70 absolute top-1/2 lg:right-10 right-3 translate-y-[-50%] cursor-pointer"
-            disabled={imageSelected === galleryImages.length - 1}
+            disabled={imageSelected === galleryImages?.length - 1}
             onClick={() => handleImageClick(imageSelected + 1)}
           >
             <FaChevronRight className="lg:text-xl" />
