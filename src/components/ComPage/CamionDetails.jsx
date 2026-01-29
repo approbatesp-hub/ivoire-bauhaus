@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { galleryImages2 } from "../../utils/constant";
 import ModalGallery from "../ImmoPage/ModalGallery";
-import videoCam from "../../assets/videoCamion.mp4";
+import VideoCam from "../../assets/videoCamion.mp4";
 
 const CamionDetails = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -241,7 +241,7 @@ const CamionDetails = () => {
               {" "}
               {/* 16:9 Aspect Ratio */}
               <video
-                src={videoCam}
+                src={VideoCam}
                 autoPlay
                 controls
                 playsInline
