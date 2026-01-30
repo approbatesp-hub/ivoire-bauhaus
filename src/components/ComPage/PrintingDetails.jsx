@@ -216,7 +216,7 @@ const PrintingDetails = () => {
           <div className="mt-6 bg-gradient-to-r from-primary/30 to-secondary/20 rounded-2xl p-8 border border-primary/30">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 className="text-2xl font-bold lg:mb-3">
+                <h3 className="text-xl lg:text-2xl font-bold lg:mb-3">
                   Prêt à personnaliser votre marque ?
                 </h3>
                 <p className="text-slate-300 hidden lg:block">
@@ -229,9 +229,9 @@ const PrintingDetails = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-secondary hover:text-slate-900 transition-all duration-300 flex items-center gap-3 whitespace-nowrap group">
+                <button className="px-4 py-4 bg-white text-primary font-bold rounded-xl hover:bg-secondary hover:text-slate-900 transition-all duration-300 flex items-center gap-3 whitespace-nowrap group">
                   Demander un devis gratuit
-                  <ChevronUp className="w-5 h-5 rotate-45 group-hover:rotate-90 transition-transform" />
+                  <ChevronUp className="w-5 h-5 hidden lg:block rotate-45 group-hover:rotate-90 transition-transform" />
                 </button>
               </a>
             </div>
