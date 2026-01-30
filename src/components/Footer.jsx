@@ -97,7 +97,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-5 lg:mb-8 uppercase lg:text-left md:text-right tracking-wider text-secondary">
+              <h4 className="font-bold text-lg mt-10 md:mt-0 mb-5 lg:mb-8 uppercase lg:text-left md:text-right tracking-wider text-secondary">
                 Navigation
               </h4>
               <ul className="space-y-3 text-slate-300 font-light lg:text-left md:text-right ">
