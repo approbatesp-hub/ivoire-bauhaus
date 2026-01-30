@@ -212,7 +212,7 @@ const Contact = () => {
                     </h4>
                     <p className="text-xl lg:text-2xl font-bold text-slate-900 leading-tight">
                       Cocody Riviera <br />
-                      Palmeraie, SIPIM 1 <br />
+                      Palmeraie, SIPIM 4 <br />
                       <span className="text-teal-600 font-serif italic text-xl">
                         Abidjan, Côte d'Ivoire
                       </span>

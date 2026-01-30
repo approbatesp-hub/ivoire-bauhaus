@@ -170,7 +170,7 @@ const CamionDetails = () => {
             </span>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
             {galleryImages2.map((img, i) => (
               <div
                 key={i}
@@ -183,7 +183,7 @@ const CamionDetails = () => {
                 <img
                   src={img.url}
                   alt={`Vue camion LED ${i + 1}`}
-                  className="w-full h-28 lg:h-40 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full md:h-40 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
                   <div className="text-white flex items-center gap-1.5 text-sm">

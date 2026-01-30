@@ -21,9 +21,9 @@ const Banner = ({ homePageOne, homePageTwo }) => {
             Notre expertise
           </span>
           <h1 className="text-3xl leading-9 lg:text-6xl font-bold text-white mb-2 lg:mb-6 lg:leading-tight tracking-tight">
-            Promotion
+            Service
             <br />
-            Immobilière
+            Immobilier
           </h1>
           <p className="text-white/90 text-lg lg:text-xl font-light max-w-lg mb-3 lg:mb-8 leading-relaxed tracking-wide">
             Investissez dans l'avenir avec{" "}

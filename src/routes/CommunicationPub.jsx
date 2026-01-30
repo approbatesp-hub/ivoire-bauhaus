@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAllImages } from "../utils/hooks";
 import { setImages } from "../redux/bauhaus";
+import PrintingDetails from "../components/ComPage/PrintingDetails";
 
 const CommunicationPub = () => {
   const { imagesRedux } = useSelector((state) => state.projet);
@@ -12,7 +13,7 @@ const CommunicationPub = () => {
   const dispatch = useDispatch();
 
   const imageComPage = imagesRedux.filter(
-    (img) => img.folder === "communication"
+    (img) => img.folder === "communication",
   );
 
   useEffect(() => {
@@ -23,12 +24,12 @@ const CommunicationPub = () => {
     }
   }, []);
   return (
-    <div className="bg-slate-50 min-h-screen pb-20 font-sans">
+    <div className="bg-slate-50 min-h-screen  font-sans">
       {/* Hero Section */}
-      <section className="relative bg-slate-900 py-24 overflow-hidden">
+      <section className="relative bg-slate-900 py-18 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-teal-500/10 to-transparent"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 border border-teal-500/20 rounded-full text-teal-400 mb-8">
+          <div className="inline-flex items-center mt-5 gap-2 px-4 py-2 bg-teal-500/10 border border-teal-500/20 rounded-full text-teal-400 mb-8">
             <ShieldCheck className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-widest">
               Régie Publicitaire Agréée
@@ -47,6 +48,9 @@ const CommunicationPub = () => {
 
       <CamionDetails />
       <AdvertisingDetails images={imageComPage} />
+      <div>
+        <PrintingDetails />
+      </div>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const Footer = () => {
       className="bg-slate-900 text-white pt-10 lg:pt-14 pb-10 border-t border-teal-900"
     >
       <div className="container mx-auto px-6 text-center lg:text-left">
-        <div className="grid md:grid-cols-3 gap-12 mb-8 lg:mb-12">
+        <div className="grid lg:grid-cols-[40%_60%] gap-12 mb-8 lg:mb-12">
           {/* Brand */}
           <div>
             <Link to={"/"} className="font-bold text-3xl tracking-tighter mb-6">
@@ -59,88 +59,90 @@ const Footer = () => {
           </div>
 
           {/* Contacts */}
-          <div>
-            <h4 className="font-bold text-lg mb-5 lg:mb-8 uppercase tracking-wider text-secondary">
-              Contactez-nous
-            </h4>
-            <div className="space-y-6 text-slate-300 font-light  ">
-              <Link
-                href="tel:+225 07 18 92 00 06"
-                className="flex items-center justify-center lg:justify-start gap-4 hover:text-teal-400 transition-colors group"
-              >
-                <div className="bg-slate-800 p-2 rounded group-hover:bg-teal-900 transition-colors">
-                  <FaPhone size={18} />
+          <div className="md:flex md:justify-center w-full md:gap-20 lg:gap-40   ">
+            <div>
+              <h4 className="font-bold text-lg mb-5 lg:mb-8 uppercase tracking-wider text-secondary">
+                Contactez-nous
+              </h4>
+              <div className="space-y-6 text-slate-300 font-light  ">
+                <Link
+                  href="tel:+225 07 18 92 00 06"
+                  className="flex items-center justify-center lg:justify-start gap-4 hover:text-teal-400 transition-colors group"
+                >
+                  <div className="bg-slate-800 p-2 rounded group-hover:bg-teal-900 transition-colors">
+                    <FaPhone size={18} />
+                  </div>
+                  +225 07 18 92 00 06
+                </Link>
+                <Link
+                  href="https://wa.me/2250718920006"
+                  className="flex items-center justify-center lg:justify-start gap-4 hover:text-teal-400 transition-colors group"
+                >
+                  <div className="bg-slate-800 p-2 rounded group-hover:bg-teal-900 transition-colors">
+                    <FaWhatsapp size={18} />
+                  </div>
+                  WhatsApp Direct
+                </Link>
+                <div className="flex items-center justify-center lg:justify-start gap-4 group">
+                  <div className="bg-slate-800 p-2 rounded">
+                    <FaMapPin size={18} />
+                  </div>
+                  <p>
+                    <span className="hidden lg:inline ">
+                      Riviera Palmeraie, SIPIM 4, Cocody <br />
+                    </span>
+                    <span>Abidjan, Côte d'Ivoire </span>
+                  </p>
                 </div>
-                +225 07 18 92 00 06
-              </Link>
-              <Link
-                href="https://wa.me/2250718920006"
-                className="flex items-center justify-center lg:justify-start gap-4 hover:text-teal-400 transition-colors group"
-              >
-                <div className="bg-slate-800 p-2 rounded group-hover:bg-teal-900 transition-colors">
-                  <FaWhatsapp size={18} />
-                </div>
-                WhatsApp Direct
-              </Link>
-              <div className="flex items-center justify-center lg:justify-start gap-4 group">
-                <div className="bg-slate-800 p-2 rounded">
-                  <FaMapPin size={18} />
-                </div>
-                <p>
-                  <span className="hidden lg:inline ">
-                    Riviera Palmeraie, SIPIM 1, Cocody <br />
-                  </span>
-                  <span>Abidjan, Côte d'Ivoire </span>
-                </p>
               </div>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-5 lg:mb-8 uppercase lg:text-left md:text-right tracking-wider text-secondary">
+                Navigation
+              </h4>
+              <ul className="space-y-3 text-slate-300 font-light lg:text-left md:text-right ">
+                <li>
+                  <Link
+                    to="/"
+                    // onClick={() => scrollToSection("promo")}
+                    className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
+                  >
+                    Accueil{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/promotionimmobiliere"
+                    // onClick={() => scrollToSection("promo")}
+                    className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
+                  >
+                    Promotion Immobilière
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={"/communicationpub"}
+                    // onClick={() => scrollToSection("coms")}
+                    className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
+                  >
+                    Communication & Publicité
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to={"/contact"}
+                    // onClick={() => scrollToSection("about")}
+                    className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-bold text-lg mb-5 lg:mb-8 uppercase tracking-wider text-secondary">
-              Navigation
-            </h4>
-            <ul className="space-y-3 text-slate-300 font-light">
-              <li>
-                <Link
-                  to="/"
-                  // onClick={() => scrollToSection("promo")}
-                  className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
-                >
-                  Accueil{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/promotionimmobiliere"
-                  // onClick={() => scrollToSection("promo")}
-                  className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
-                >
-                  Promotion Immobilière
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/communicationpub"}
-                  // onClick={() => scrollToSection("coms")}
-                  className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
-                >
-                  Communication & Publicité
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to={"/contact"}
-                  // onClick={() => scrollToSection("about")}
-                  className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div className="border-t border-slate-800 pt-8   text-slate-500 text-sm font-light">

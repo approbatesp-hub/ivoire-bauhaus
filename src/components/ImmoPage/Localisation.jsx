@@ -25,7 +25,7 @@ const Localisation = () => {
       </div>
 
       {/* Container */}
-      <div className="relative bg-linear-to-b from-white to-slate-50/50 rounded-3xl overflow-hidden border border-slate-200/70">
+      <div className="relative bg-linear-to-b from-white to-slate-50/50 rounded-3xl overflow-hidden border border-slate-200/70 bg">
         <div className="relative z-10">
           {/* Header */}
           <div className="relative p-6 lg:p-8 bg-linear-to-r from-slate-900 via-slate-800 to-emerald-900 text-white">

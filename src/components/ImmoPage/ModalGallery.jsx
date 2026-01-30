@@ -25,7 +25,10 @@ const ModalGallery = ({
           </button>
           <div className="lg:h-[70vh] lg:w-[50vw] w-[70vw] h-[40vh]  ">
             <img
-              src={galleryImages?.[imageSelected].publicUrl}
+              src={
+                galleryImages?.[imageSelected].publicUrl ||
+                galleryImages?.[imageSelected].url
+              }
               className="w-full h-full object-cover rounded-lg"
               alt=""
             />

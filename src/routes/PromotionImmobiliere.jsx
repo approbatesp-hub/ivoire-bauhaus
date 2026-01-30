@@ -86,12 +86,12 @@ const PromotionPage = () => {
 
         <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/30 mb-6">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/30 mb-6">
               <ShieldCheck className="w-5 h-5 text-teal-400" />
               <span className="text-teal-400 text-[12px] lg:text-sm font-bold tracking-widest uppercase italic">
                 Promoteur Immobilier Agréé
               </span>
-            </div>
+            </div> */}
             <h1 className="text-4xl lg:text-7xl font-extrabold text-white mb-4 lg:mb-8 leading-tight">
               Bâtir l'Excellence, <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-teal-400 to-emerald-400">
@@ -121,9 +121,9 @@ const PromotionPage = () => {
               Présentation du Projet
             </h3>
             <p className="lg:text-lg text-slate-600 leading-relaxed mb-7">
-              Situé à Assinie, ce projet d'exception offre une opportunité rare
-              d'investissement dans l'une des zones les plus prisées de la Côte
-              d'Ivoire. <strong>Ivoire Gardens </strong>
+              Situé à 10 minutes d'Assinie, ce projet d'exception offre une
+              opportunité rare d'investissement dans l'une des zones les plus
+              prisées de la Côte d'Ivoire. <strong>Ivoire Gardens </strong>
               allie une zone commerciale dynamique à un quartier résidentiel
               haut de gamme.
             </p>
@@ -251,15 +251,15 @@ const PromotionPage = () => {
                     className="w-full py-3 border-2 border-teal-600  text-slate-800 rounded-xl font-bold hover:bg-teal-600  cursor-pointer transition-all hover:text-white  flex items-center justify-center gap-2"
                   >
                     <Phone className="w-5 h-5" />
-                    Contactez le promoteur
+                    Contactez le conseiller
                   </button>
                 </div>
               </div>
             </div>
 
             {/* Project Content */}
-            <div className="lg:w-2/3">
-              <div className="prose prose-slate max-w-none">
+            <div className="mx-auto lg:mx-0 lg:w-2/3">
+              <div className="mx-auto ">
                 <div className="hidden lg:block">
                   <h3 className="text-4xl font-bold text-slate-900 mb-6">
                     Présentation du Projet
@@ -330,7 +330,6 @@ const PromotionPage = () => {
                   handleImageClick={handleImageClick}
                   images={imageImmoPage}
                 />
-
                 {/* Location Map Section */}
                 <Localisation />
               </div>
@@ -421,7 +420,7 @@ const PromotionPage = () => {
           onClick={() => setContactModalOpen(true)}
           className="px-10 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800"
         >
-          Contacter le promoteur
+          Contacter le conseiller
         </button>
       </section>
       {modalOpen && (

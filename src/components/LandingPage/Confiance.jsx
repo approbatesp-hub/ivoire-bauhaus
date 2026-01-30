@@ -1,48 +1,42 @@
 import React from "react";
-import LogoApprobat from "../../assets/logoApprobat.png";
-import LogoTimu from "../../assets/Timutech.svg";
 
-import LogoRose from "../../assets/logoROSE.png";
+import LogoYango from "../../assets/partenaires/yango.png";
+import LogoMoov from "../../assets/partenaires/moov.png";
+
 const Confiance = () => {
   const clients = [
     {
-      name: "Approbat Services",
-      logo: LogoApprobat,
+      name: "Yango",
+      logo: LogoYango,
     },
     {
-      name: "Timutech",
-      logo: LogoTimu,
-    },
-    {
-      name: "Approbat Services",
-      logo: LogoRose,
-    },
-    {
-      name: "Timutech",
-      logo: LogoTimu,
+      name: "Moov Africa",
+      logo: LogoMoov,
     },
   ];
 
   return (
     <div>
-      <section id="refs" className="py-[50px] bg-white">
+      <section id="refs" className="py-[30px]  lg:py-[50px] bg-white">
         <div className="max-w-[90%] lg:max-w-[75%] mx-auto lg:px-6 text-center">
-          <h4 className="text-3xl font-bold text-slate-800 mb-12 uppercase tracking-wide">
+          <h4 className="text-[24px] lg:text-3xl font-bold text-slate-800 mb-3 lg:mb-12 uppercase tracking-wide">
             Ils nous font confiance
           </h4>
           {/* Logo Grid - Using placeholders */}
-          <div className="flex items-center gap-8  justify-center opacity-90 ">
+          <div className="flex items-center gap-2  lg:gap-8 justify-center opacity-90 ">
             {clients.map((client) => (
               <div
                 key={client.name}
-                className="group p-6 grayscale hover:grayscale-0 transition-all duration-300  grid grid-cols-4r cursor-pointer "
+                className="group p-6   
+              
+                 cursor-pointer "
               >
                 {/* Placeholder for Logo */}
                 <div className="text-xl bg- font-black text-slate-300 group-hover:text-teal-600 flex flex-col justify-center items-center">
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="w-50 h-30 object-contain"
+                    className="w-[70%] h-[70%] lg:w-50 lg:h-30 object-contain"
                   />
                 </div>
               </div>

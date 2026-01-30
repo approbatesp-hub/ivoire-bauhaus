@@ -14,8 +14,8 @@ const Camion = ({ homePageFour, texts }) => {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-teal-900/20 skew-x-12 transform translate-x-20"></div>
 
         <div className="max-w-[90%] lg:max-w-[75%] mx-auto lg:px-6 relative z-10">
-          <div className="flex flex-col md:flex-row-reverse items-center gap-8 lg:gap-16">
-            <div className="md:w-1/2">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
+            <div className="lg:w-1/2">
               {/* Image */}
               <div className="relative group w-full">
                 {/* Glow */}
@@ -23,7 +23,7 @@ const Camion = ({ homePageFour, texts }) => {
 
                 {/* Skeleton Loader */}
                 {!imageLoaded && (
-                  <div className="relative rounded-lg w-full lg:w-[650px] h-[260px]  lg:h-[520px] bg-teal-950 animate-pulse flex items-center justify-center">
+                  <div className="relative rounded-lg w-full h-[260px]   lg:w-[650px] lg:h-[520px] bg-teal-950 animate-pulse flex items-center justify-center">
                     <SimpleLoader />
                   </div>
                 )}
@@ -36,7 +36,7 @@ const Camion = ({ homePageFour, texts }) => {
                     loading="lazy"
                     onLoad={() => setImageLoaded(true)}
                     onError={() => setImageLoaded(true)}
-                    className={`relative rounded-lg shadow-2xl w-full lg:w-[650px] h-[260px]  lg:h-[520px] object-cover transition-opacity duration-700 ${
+                    className={`relative rounded-lg shadow-2xl w-full   h-[260px] lg:w-[650px]   lg:h-[520px] object-cover transition-opacity duration-700 ${
                       imageLoaded ? "opacity-100" : "opacity-0"
                     }`}
                   />
@@ -45,7 +45,7 @@ const Camion = ({ homePageFour, texts }) => {
             </div>
 
             {/* TEXT CONTENT */}
-            <div className="md:w-1/2">
+            <div className="lg:w-1/2">
               <span className="text-secondary font-bold tracking-wider text-sm uppercase">
                 Visibilité Maximale
               </span>

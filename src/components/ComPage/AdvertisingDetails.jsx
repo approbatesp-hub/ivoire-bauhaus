@@ -267,6 +267,7 @@ const AdvertisingDetails = ({ images }) => {
             </div>
           </div>
         </div>
+
         {contactModalOpen && (
           <ModalContact setContactModalOpen={setContactModalOpen} />
         )}

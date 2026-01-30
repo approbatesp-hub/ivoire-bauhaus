@@ -9,7 +9,7 @@ const Header = () => {
   const { pathname } = useLocation();
   const navLinks = [
     { name: "Accueil", path: "/" },
-    { name: "Promotion Immobilière", path: "/promotionimmobiliere" },
+    { name: "Service Immobilier", path: "/promotionimmobiliere" },
     { name: "Communication & Pub", path: "/communicationpub" },
     { name: "Contact", path: "/contact" },
   ];

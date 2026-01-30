@@ -107,8 +107,7 @@ const ModalContact = ({ setContactModalOpen }) => {
                     Bureau Commercial
                   </h5>
                   <p className="text-slate-900 font-medium text-base">
-                    Abidjan, Cocody Riviera Palmeraie non loin de SIPIM 4 BP
-                    2721
+                    Abidjan, Cocody Riviera Palmeraie non loin de SIPIM 4
                   </p>
                 </div>
               </div>

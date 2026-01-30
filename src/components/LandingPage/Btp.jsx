@@ -32,10 +32,10 @@ const Btp = ({ homePageThree, texts }) => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               {!imageLoaded && (
-                <div className="relative rounded-lg w-[650px] w-full   h-[260px]  lg:h-[520px] bg-teal-950 animate-pulse flex items-center justify-center">
+                <div className="relative rounded-lg w-full   h-[260px]  lg:h-[520px] bg-teal-950 animate-pulse flex items-center justify-center">
                   <SimpleLoader />
                 </div>
               )}

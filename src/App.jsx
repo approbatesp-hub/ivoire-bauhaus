@@ -42,9 +42,9 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <DashboardAdmin /> },
-      { path: "editImages", element: <EditImages /> },
-      { path: "editText", element: <EditText /> },
-      { path: "editerMDP", element: <EditPW /> },
+      { path: "/admin/editiImages", element: <EditImages /> },
+      { path: "/admin/editText", element: <EditText /> },
+      { path: "/admin/editerMDP", element: <EditPW /> },
     ],
   },
 ]);

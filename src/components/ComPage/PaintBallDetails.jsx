@@ -111,11 +111,11 @@ const PaintBallDetails = () => {
             </span>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {galleryImages3.map((img, i) => (
               <div
                 key={i}
-                className="relative group cursor-zoom-in"
+                className="relative group cursor-zoom-in bg"
                 onClick={() => {
                   setImageSelected(i);
                   setModalOpen(true);
