@@ -245,7 +245,7 @@ const Contact = () => {
                             Toute la journée
                           </p>
                         </div>
-                        <span className="text-xl font-bold text-slate-900">
+                        <span className="text-lg lg:text-xl font-bold text-slate-900">
                           08:00 — 18:00
                         </span>
                       </div>
@@ -258,7 +258,7 @@ const Contact = () => {
                             Matinée uniquement
                           </p>
                         </div>
-                        <span className="text-xl font-bold text-slate-900">
+                        <span className="text-lg lg:text-xl font-bold text-slate-900">
                           09:00 — 14:00
                         </span>
                       </div>

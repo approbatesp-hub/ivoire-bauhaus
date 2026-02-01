@@ -16,7 +16,7 @@ const Btp = ({ homePageThree, texts }) => {
           {/* Header Section */}
           <div className="text-center mb-8 lg:mb-16">
             <span className="text-teal-600 font-bold tracking-wider text-sm uppercase">
-              Promotion Immobilière
+              Service Immobilier
             </span>
             <h3 className="text-[28px] lg:text-5xl font-bold text-slate-900 mt-2 mb-3 lg:mb-6">
               {texts?.mainTitle}

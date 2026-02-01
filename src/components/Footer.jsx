@@ -43,14 +43,14 @@ const Footer = () => {
               </Link>
               <Link
                 target="_blank"
-                href="https://www.tiktok.com/@ivoire.bauhaus"
+                to="https://www.tiktok.com/@ivoire.bauhaus"
                 className="p-3 bg-slate-800 rounded-full hover:bg-teal-600 hover:text-white transition-colors text-slate-400"
               >
                 <FaTiktok size={20} />
               </Link>
               <Link
                 target="_blank"
-                href="https://www.linkedin.com/company/ivoire-bauhaus-group/"
+                to="https://www.linkedin.com/company/ivoire-bauhaus-group/"
                 className="p-3 bg-slate-800 rounded-full hover:bg-teal-600 hover:text-white transition-colors text-slate-400"
               >
                 <FaLinkedin size={20} />
@@ -66,7 +66,7 @@ const Footer = () => {
               </h4>
               <div className="space-y-6 text-slate-300 font-light  ">
                 <Link
-                  href="tel:+225 07 18 92 00 06"
+                  to="tel:+225 07 18 92 00 06"
                   className="flex items-center justify-center lg:justify-start gap-4 hover:text-teal-400 transition-colors group"
                 >
                   <div className="bg-slate-800 p-2 rounded group-hover:bg-teal-900 transition-colors">
@@ -75,7 +75,8 @@ const Footer = () => {
                   +225 07 18 92 00 06
                 </Link>
                 <Link
-                  href="https://wa.me/2250718920006"
+                  target="_blank"
+                  to="https://wa.me/2250718920006"
                   className="flex items-center justify-center lg:justify-start gap-4 hover:text-teal-400 transition-colors group"
                 >
                   <div className="bg-slate-800 p-2 rounded group-hover:bg-teal-900 transition-colors">
@@ -116,7 +117,7 @@ const Footer = () => {
                     // onClick={() => scrollToSection("promo")}
                     className="hover:text-teal-400 hover:translate-x-1 transition-all inline-block"
                   >
-                    Promotion Immobilière
+                    Service Immobilier
                   </Link>
                 </li>
                 <li>

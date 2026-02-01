@@ -53,11 +53,11 @@ const PaintBallDetails = () => {
               className="w-full flex items-center justify-between font-bold text-slate-900 group py-2 text-sm lg:text-base"
             >
               <span className="flex items-center gap-2">
-                <Zap className="text-sm lg:text-lg w-4 h-4 text-orange-500 hidden lg:inline" />
+                <Zap className="text-sm lg:text-lg w-4 h-4 text-emerald-500 hidden lg:inline" />
                 Opportunités Publicitaires
               </span>
               {showDetails ? (
-                <ChevronUp className="text-orange-500" />
+                <ChevronUp className="text-emerald-500" />
               ) : (
                 <ChevronDown className="text-slate-400 group-hover:text-slate-600 transition-transform" />
               )}
@@ -71,13 +71,13 @@ const PaintBallDetails = () => {
               }`}
             >
               <ul className="space-y-3 text-slate-600 pl-5">
-                <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-orange-500 before:rounded-full text-xs lg:text-base">
+                <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-emerald-500 before:rounded-full text-xs lg:text-base">
                   <strong className="text-slate-900">fréquentation :</strong>{" "}
                   Chaque semaine, nous accueillons une audience de plus de 500
                   passionnés de sport extrême, des amateurs de sensations fortes
                   et des aventuriers à la recherche d’expériences uniques.
                 </li>
-                <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-orange-500 before:rounded-full text-xs lg:text-base">
+                <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-emerald-500 before:rounded-full text-xs lg:text-base">
                   <strong className="text-slate-900">
                     Événements exclusifs :
                   </strong>{" "}
@@ -90,7 +90,7 @@ const PaintBallDetails = () => {
                 download="OPPORTUNITES_PAINTBALL_IVOIRE_BAUHAUS.pdf"
                 className="block mt-5"
               >
-                <button className="w-full py-3 bg-orange-600 text-white rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-orange-700 transition-all">
+                <button className="w-full py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-emerald-700 transition-all">
                   <Download className="w-4 h-4" />
                   Télécharger la proposition commerciale
                 </button>

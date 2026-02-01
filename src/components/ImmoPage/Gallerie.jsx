@@ -117,7 +117,7 @@ const Gallerie = ({ images = [], handleImageClick }) => {
                 className="group relative overflow-hidden rounded-xl shadow-lg cursor-zoom-in"
                 onClick={() => handleImageClick(i + 1)}
               >
-                <div className=" h-[180px] lg:h-[216px]">
+                <div className=" h-[160px] lg:h-[216px]">
                   <img
                     src={img.publicUrl}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

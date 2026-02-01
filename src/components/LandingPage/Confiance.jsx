@@ -2,6 +2,9 @@ import React from "react";
 
 import LogoYango from "../../assets/partenaires/yango.png";
 import LogoMoov from "../../assets/partenaires/moov.png";
+import LogoMairie from "../../assets/partenaires/mairie.png";
+import LogoEcole from "../../assets/partenaires/kadi.jpeg";
+import LogoBiotek from "../../assets/partenaires/biotech.png";
 
 const Confiance = () => {
   const clients = [
@@ -13,6 +16,18 @@ const Confiance = () => {
       name: "Moov Africa",
       logo: LogoMoov,
     },
+    {
+      name: "Mairie de Cocody",
+      logo: LogoMairie,
+    },
+    {
+      name: "Kadi's Raouda",
+      logo: LogoEcole,
+    },
+    {
+      name: "Bioteck-ci",
+      logo: LogoBiotek,
+    },
   ];
 
   return (
@@ -23,11 +38,11 @@ const Confiance = () => {
             Ils nous font confiance
           </h4>
           {/* Logo Grid - Using placeholders */}
-          <div className="flex items-center gap-2  lg:gap-8 justify-center opacity-90 ">
+          <div className="grid grid-cols-3 lg:grid-cols-5 items-center gap-6  md:gap-10 justify-center opacity-90 ">
             {clients.map((client) => (
               <div
                 key={client.name}
-                className="group p-6   
+                className="group 
               
                  cursor-pointer "
               >
