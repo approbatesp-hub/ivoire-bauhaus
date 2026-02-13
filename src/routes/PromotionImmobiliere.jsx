@@ -21,8 +21,17 @@ import Gallerie from "../components/ImmoPage/Gallerie";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllImages } from "../utils/hooks";
 import { setImages } from "../redux/bauhaus";
+import useSEO from "../utils/useSEO";
 
 const PromotionPage = () => {
+  useSEO({
+    title: "Promotion Immobilière | Ivoire Gardens Assinie - Ivoire Bauhaus",
+    description:
+      "Découvrez Ivoire Gardens à Assinie-Mafia : 24 villas haut de gamme, 16 magasins, piscine et sécurité 24/7. Investissez dans l'immobilier en Côte d'Ivoire avec Ivoire Bauhaus.",
+    keywords:
+      "Ivoire Gardens, villa Assinie, promotion immobilière Abidjan, terrain Assinie-Mafia, investissement immobilier Côte d'Ivoire, achat villa Côte d'Ivoire, promoteur immobilier Abidjan, résidence haut de gamme Assinie",
+    path: "/promotionimmobiliere",
+  });
   const [videoPlayed, setVideoPlayed] = useState(false);
   const dispatch = useDispatch();
   const { imagesRedux } = useSelector((state) => state.projet);
@@ -156,14 +165,14 @@ const PromotionPage = () => {
                     <img
                       className="rounded-[10px] h-full w-full object-cover "
                       src={Cite}
-                      alt=""
+                      alt="Présentation vidéo du projet Ivoire Gardens Assinie"
                     />
                     <div className="absolute   top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-[30px]    ">
                       <div className=" w-[30%] mx-auto relative after:absolute after:border-[1.2px] after:border-slate-100  after:-inset-1   after:animate-[ping_1.2s_ease_infinite] after:rounded-full ">
                         <img
                           src={YoutubeIcon}
                           className="w-full   mx-auto  "
-                          alt=""
+                          alt="Lire la vidéo Ivoire Gardens"
                         />
                       </div>
                     </div>
@@ -302,14 +311,14 @@ const PromotionPage = () => {
                         <img
                           className="rounded-[10px] h-full w-full object-cover "
                           src={Cite}
-                          alt=""
+                          alt="Vue aérienne du projet immobilier Ivoire Gardens à Assinie"
                         />
                         <div className="absolute   top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-[30px]    ">
                           <div className=" w-[20%] mx-auto relative after:absolute after:border-[1.2px] after:border-slate-100  after:-inset-1   after:animate-[ping_1.2s_ease_infinite] after:rounded-full ">
                             <img
                               src={YoutubeIcon}
                               className="w-full   mx-auto  "
-                              alt=""
+                              alt="Icône de lecture de la vidéo"
                             />
                           </div>
                         </div>

@@ -123,7 +123,7 @@ const PaintBallDetails = () => {
               >
                 <img
                   src={img.url}
-                  alt=""
+                  alt="Activité paintball organisée par Ivoire Bauhaus"
                   className="rounded-xl object-cover w-full h-full"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-xl">

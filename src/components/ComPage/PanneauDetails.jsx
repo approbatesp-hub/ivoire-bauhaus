@@ -46,7 +46,7 @@ const PanneauDetails = () => {
                   <img
                     src={Panneau}
                     className="h-full w-full rounded-b-3xl  object-cover"
-                    alt=""
+                    alt="Panneau publicitaire Ivoire Bauhaus en Côte d'Ivoire"
                   />
                 </div>
               </div>

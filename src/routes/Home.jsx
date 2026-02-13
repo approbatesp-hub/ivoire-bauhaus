@@ -9,8 +9,18 @@ import QuiSOmmesNous from "../components/LandingPage/QuiSOmmesNous";
 import { useDispatch } from "react-redux";
 import { setImages, setTexts } from "../redux/bauhaus";
 import { useEffect } from "react";
+import useSEO from "../utils/useSEO";
 
 const Home = () => {
+  useSEO({
+    title:
+      "Ivoire Bauhaus | Promotion Immobilière & Communication en Côte d'Ivoire",
+    description:
+      "Ivoire Bauhaus est un groupe multiservices en Côte d'Ivoire : promotion immobilière, vente de terrains à Assinie, régie publicitaire et affichage LED à Abidjan.",
+    keywords:
+      "Ivoire Bauhaus, promotion immobilière Côte d'Ivoire, immobilier Abidjan, terrain Assinie, Ivoire Gardens, régie publicitaire, affichage LED, investissement immobilier",
+    path: "/",
+  });
   // 1. Get the data fetched by the React Router Loader
   const loaderData = useLoaderData();
   const dispatch = useDispatch();
@@ -29,7 +39,7 @@ const Home = () => {
 
   // 3. Filter images (data is guaranteed to exist because of initialData)
   const imageHomePage = data.images.filter(
-    (img) => img.folder === "page_accueil"
+    (img) => img.folder === "page_accueil",
   );
 
   useEffect(() => {

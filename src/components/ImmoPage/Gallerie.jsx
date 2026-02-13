@@ -78,7 +78,7 @@ const Gallerie = ({ images = [], handleImageClick }) => {
               <img
                 src={images[0].publicUrl}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                alt="Vue principale du projet"
+                alt="Vue principale du projet immobilier Ivoire Gardens à Assinie"
               />
 
               {/* Hover Overlay (RESTORED) */}
@@ -121,7 +121,7 @@ const Gallerie = ({ images = [], handleImageClick }) => {
                   <img
                     src={img.publicUrl}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    alt={`Vue ${i + 2}`}
+                    alt={`Ivoire Gardens Assinie - Photo ${i + 2} du projet immobilier`}
                   />
                 </div>
 

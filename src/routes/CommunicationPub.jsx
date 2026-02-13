@@ -6,8 +6,17 @@ import { useEffect } from "react";
 import { getAllImages } from "../utils/hooks";
 import { setImages } from "../redux/bauhaus";
 import PrintingDetails from "../components/ComPage/PrintingDetails";
+import useSEO from "../utils/useSEO";
 
 const CommunicationPub = () => {
+  useSEO({
+    title: "Communication & Publicité | Régie Publicitaire - Ivoire Bauhaus",
+    description:
+      "Régie publicitaire agréée en Côte d'Ivoire : camions LED haute définition, panneaux d'affichage stratégiques, bâches publicitaires et gestion de campagne clé en main à Abidjan.",
+    keywords:
+      "régie publicitaire Abidjan, camion LED publicitaire, panneau publicitaire Côte d'Ivoire, affichage publicitaire Abidjan, bâche publicitaire, communication visuelle, campagne publicitaire Côte d'Ivoire",
+    path: "/communicationpub",
+  });
   const { imagesRedux } = useSelector((state) => state.projet);
   // console.log(imagesRedux);
   const dispatch = useDispatch();

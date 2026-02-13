@@ -17,8 +17,17 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { BsTiktok } from "react-icons/bs";
+import useSEO from "../utils/useSEO";
 
 const Contact = () => {
+  useSEO({
+    title: "Contactez-nous | Ivoire Bauhaus - Abidjan, Côte d'Ivoire",
+    description:
+      "Contactez Ivoire Bauhaus à Cocody Riviera Palmeraie, Abidjan. WhatsApp, email ou visite sur place. Notre équipe vous accompagne pour vos projets immobiliers et publicitaires.",
+    keywords:
+      "contact Ivoire Bauhaus, adresse Ivoire Bauhaus Abidjan, WhatsApp Ivoire Bauhaus, téléphone promoteur immobilier Abidjan, Cocody Riviera Palmeraie",
+    path: "/contact",
+  });
   const socialLinks = [
     {
       name: "Instagram",

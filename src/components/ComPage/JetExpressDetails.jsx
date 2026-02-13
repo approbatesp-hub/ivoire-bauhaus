@@ -38,7 +38,7 @@ const JetExpressDetails = () => {
                   <img
                     src={CarJet}
                     className="h-full w-full rounded-b-3xl  object-cover"
-                    alt=""
+                    alt="Véhicule Jet Express pour campagne publicitaire Ivoire Bauhaus"
                   />
                 </div>
               </div>

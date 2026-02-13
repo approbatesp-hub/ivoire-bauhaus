@@ -30,7 +30,7 @@ const ModalGallery = ({
                 galleryImages?.[imageSelected].url
               }
               className="w-full h-full object-cover rounded-lg"
-              alt=""
+              alt="Galerie photo du projet Ivoire Gardens Assinie"
             />
           </div>
           <button

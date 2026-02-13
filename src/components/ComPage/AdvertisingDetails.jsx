@@ -129,7 +129,7 @@ const AdvertisingDetails = ({ images }) => {
                             <div className="relative aspect-video overflow-hidden">
                               <img
                                 src={item.publicUrl}
-                                alt={`Support publicitaire ${index + 1}`}
+                                alt={`Support publicitaire Ivoire Bauhaus à l'Université de San Pedro - Photo ${index + 1}`}
                                 className="w-full h-full object-cover"
                               />
                             </div>

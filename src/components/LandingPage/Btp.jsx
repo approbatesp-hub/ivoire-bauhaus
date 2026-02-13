@@ -46,7 +46,7 @@ const Btp = ({ homePageThree, texts }) => {
                   onLoad={() => setImageLoaded(true)}
                   onError={() => setImageLoaded(true)}
                   className="w-full lg:w-[650px] h-[260px]  lg:h-[520px]  object-cover rounded-xl "
-                  alt=""
+                  alt="Promotion immobilière Ivoire Bauhaus - Projets de construction en Côte d'Ivoire"
                 />
               )}
             </div>

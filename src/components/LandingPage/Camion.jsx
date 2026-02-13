@@ -32,7 +32,7 @@ const Camion = ({ homePageFour, texts }) => {
                 {homePageFour?.publicUrl && (
                   <img
                     src={homePageFour.publicUrl}
-                    alt="Camion LED"
+                    alt="Camion LED publicitaire Ivoire Bauhaus - Affichage mobile en Côte d'Ivoire"
                     loading="lazy"
                     onLoad={() => setImageLoaded(true)}
                     onError={() => setImageLoaded(true)}
