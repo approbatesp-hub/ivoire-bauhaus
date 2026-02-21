@@ -5,11 +5,12 @@ const DEFAULT_IMAGE = `${BASE_URL}/logo.png`;
 const SITE_NAME = "Ivoire Bauhaus";
 
 const defaults = {
-  title: "Ivoire Bauhaus | Promotion Immobilière & Communication en Côte d'Ivoire",
+  title:
+    "Ivoire Bauhaus | Promotion Immobilière & Communication en Côte d'Ivoire",
   description:
-    "Ivoire Bauhaus est un groupe multiservices en Côte d'Ivoire spécialisé en promotion immobilière, vente de terrains et régie publicitaire. Découvrez Ivoire Gardens à Assinie et nos solutions d'affichage LED.",
+    "Ivoire Bauhaus accompagne particuliers et entreprises en Côte d’Ivoire à travers la promotion immobilière et des solutions de communication publicitaire innovantes, dont l’affichage LED.",
   keywords:
-    "Ivoire Bauhaus, promotion immobilière Côte d'Ivoire, immobilier Abidjan, terrain Assinie, Ivoire Gardens, régie publicitaire Abidjan, affichage LED, camion publicitaire",
+    "Ivoire Bauhaus, promotion immobilière Côte d'Ivoire, immobilier Abidjan, Ivoire Gardens, régie publicitaire Abidjan, affichage LED, camion publicitaire",
   image: DEFAULT_IMAGE,
   url: BASE_URL,
 };
