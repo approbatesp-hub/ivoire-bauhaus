@@ -29,7 +29,7 @@ const PromotionPage = () => {
     description:
       "Découvrez Ivoire Gardens à Assinie-Mafia : 24 villas haut de gamme, 16 magasins, piscine et sécurité 24/7. Investissez dans l'immobilier en Côte d'Ivoire avec Ivoire Bauhaus.",
     keywords:
-      "Ivoire Gardens, villa Assinie, promotion immobilière Abidjan, terrain Assinie-Mafia, investissement immobilier Côte d'Ivoire, achat villa Côte d'Ivoire, promoteur immobilier Abidjan, résidence haut de gamme Assinie",
+      "Ivoire Gardens, villa Assinie, promotion immobilière Abidjan, investissement immobilier Côte d'Ivoire, achat villa Côte d'Ivoire, promoteur immobilier Abidjan, résidence haut de gamme Assinie",
     path: "/promotionimmobiliere",
   });
   const [videoPlayed, setVideoPlayed] = useState(false);
