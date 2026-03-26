@@ -5,6 +5,7 @@ import LogoMoov from "../../assets/partenaires/moov.png";
 import LogoMairie from "../../assets/partenaires/mairie.png";
 import LogoEcole from "../../assets/partenaires/kadi.jpeg";
 import LogoBiotek from "../../assets/partenaires/biotech.png";
+import logoSE from "../../assets/partenaires/se.jpeg";
 
 const Confiance = () => {
   const clients = [
@@ -28,6 +29,10 @@ const Confiance = () => {
       name: "Bioteck-ci",
       logo: LogoBiotek,
     },
+    {
+      name: "Soft Event",
+      logo: logoSE,
+    },
   ];
 
   return (
@@ -38,7 +43,7 @@ const Confiance = () => {
             Ils nous font confiance
           </h4>
           {/* Logo Grid - Using placeholders */}
-          <div className="grid grid-cols-3 lg:grid-cols-5 items-center gap-6  md:gap-10 justify-center opacity-90 ">
+          <div className="grid grid-cols-3 lg:grid-cols-6 items-center gap-6  md:gap-10 justify-center opacity-90 ">
             {clients.map((client) => (
               <div
                 key={client.name}
@@ -51,7 +56,7 @@ const Confiance = () => {
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="w-[70%] h-[70%] lg:w-50 lg:h-30 object-contain"
+                    className="w-[70%] h-[65%] lg:w-50 lg:h-30 object-contain"
                   />
                 </div>
               </div>
