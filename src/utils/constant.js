@@ -131,9 +131,22 @@ export const sectionsImages = [
   },
   {
     id: "promotion",
-    title: "Promotion Immobilière",
+    title: "Promotion Immobilière - Ivoire Gardens",
     icon: Building2,
     color: "emerald",
+    items: [
+      { title: "Vue Principale" },
+      { title: "Vue 2" },
+      { title: "Vue 3" },
+      { title: "Vue 4" },
+      { title: "Vue 5" },
+    ],
+  },
+  {
+    id: "angre",
+    title: "Promotion Immobilière - Ivoire Horizons Angré",
+    icon: Building2,
+    color: "amber",
     items: [
       { title: "Vue Principale" },
       { title: "Vue 2" },

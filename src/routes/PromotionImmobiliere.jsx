@@ -9,6 +9,8 @@ import {
   ArrowRight,
   Building2,
   Users,
+  Wind,
+  Waves,
   LayoutGrid,
 } from "lucide-react";
 
@@ -23,25 +25,483 @@ import { getAllImages } from "../utils/hooks";
 import { setImages } from "../redux/bauhaus";
 import useSEO from "../utils/useSEO";
 
+const steps = [
+  {
+    title: "Découverte du projet",
+    desc: "Consultation de la brochure, visite virtuelle et analyse de l'emplacement stratégique.",
+    icon: <LayoutGrid className="w-6 h-6" />,
+  },
+  {
+    title: "Prise de contact",
+    desc: "Rencontrez notre équipe pour discuter de vos besoins et obtenir toutes les informations personnalisées.",
+    icon: <Phone className="w-6 h-6" />,
+  },
+  {
+    title: "Réservation",
+    desc: "Signature du contrat de réservation et versement du premier acompte pour sécuriser votre bien.",
+    icon: <ShieldCheck className="w-6 h-6" />,
+  },
+  {
+    title: "Suivi du processus",
+    desc: "Accompagnement administratif et technique jusqu'à la remise des clés de votre propriété.",
+    icon: <CheckCircle2 className="w-6 h-6" />,
+  },
+];
+
+/* ---------------- Section : Ivoire Horizons Angré ---------------- */
+
+const IvoireHorizonsAngreSection = ({ images, openContact }) => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [imageSelected, setImageSelected] = useState(null);
+
+  const handleImageClick = (index) => {
+    setImageSelected(index);
+    setModalOpen(true);
+  };
+
+  return (
+    <section id="ivoire-horizons-angre" className="py-10 lg:py-24 bg-white">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="text-center mb-10 lg:mb-16">
+          <span className="inline-block px-4 py-1.5 bg-teal-500/10 text-teal-700 text-xs font-bold uppercase tracking-wider rounded-full mb-4">
+            Nouveau Programme
+          </span>
+          <h2 className="text-3xl lg:text-5xl font-bold text-slate-900">
+            Ivoire Horizons Angré
+          </h2>
+        </div>
+
+        <div className="lg:hidden">
+          <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3 lg:mb-6">
+            Présentation du Projet
+          </h3>
+          <p className="lg:text-lg text-slate-600 leading-relaxed mb-7">
+            Implanté à Cocody (10e Tranche) en bordure de route, à 15 minutes
+            du CHU d'Angré et 15 minutes de l'autoroute Y4,{" "}
+            <strong>Ivoire Horizons Angré</strong> est un immeuble mixte R+3
+            au design contemporain, avec des locaux commerciaux au
+            rez-de-chaussée et des lots résidentiels du studio au penthouse.
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
+          {/* Project Specs Sidebar */}
+          <div className="lg:w-1/3 lg:sticky top-24 w-full">
+            <div className="bg-slate-50 p-5 lg:p-8 rounded-2xl border border-slate-100 shadow-sm">
+              <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-2">
+                Ivoire Horizons Angré
+              </h2>
+              <p className="text-teal-600 font-medium mb-5 lg:mb-8 flex items-center gap-2">
+                <MapPin className="w-4 h-4" /> Cocody, 10e Tranche, Abidjan
+              </p>
+
+              <div className="space-y-4 lg:space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-teal-600">
+                    <Building2 className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
+                      Unités
+                    </p>
+                    <p className="text-slate-900 font-bold">
+                      9 Lots : Studios, Appartements, T2, Penthouse
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-teal-600">
+                    <Wind className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
+                      Confort
+                    </p>
+                    <p className="text-slate-900 font-bold">
+                      Climatisation incluse, prêt à vivre
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-teal-600">
+                    <Waves className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
+                      Vue
+                    </p>
+                    <p className="text-slate-900 font-bold">
+                      Sur la lagune depuis le rooftop
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <hr className="my-5 lg:my-8 border-slate-200" />
+
+              <div className="mb-5 lg:mb-8">
+                <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter mb-1">
+                  À partir de
+                </p>
+                <p className="text-slate-900 font-extrabold text-2xl lg:text-3xl">
+                  8 500 000 FCFA
+                </p>
+                <p className="text-slate-500 text-sm mt-1">
+                  30% à la réservation, solde sur 24 mois. -5% en paiement
+                  comptant.
+                </p>
+              </div>
+
+              <hr className="my-5 lg:my-8 border-slate-200" />
+
+              <div className="space-y-4">
+                <a
+                  href="/IvoireHorizonsAngre.pdf"
+                  download="Brochure Ivoire Horizons Angré.pdf"
+                  className="mb-3 block"
+                >
+                  <button className="w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-colors flex items-center justify-center gap-2 group cursor-pointer">
+                    <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
+                    Télécharger la Brochure
+                  </button>
+                </a>
+
+                <button
+                  onClick={openContact}
+                  className="w-full py-3 border-2 border-teal-600 text-slate-800 rounded-xl font-bold hover:bg-teal-600 cursor-pointer transition-all hover:text-white flex items-center justify-center gap-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  Contactez le conseiller
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Project Content */}
+          <div className="mx-auto lg:mx-0 lg:w-2/3">
+            <div className="mx-auto">
+              <div className="hidden lg:block">
+                <h3 className="text-4xl font-bold text-slate-900 mb-6">
+                  Présentation du Projet
+                </h3>
+                <p className="text-lg text-slate-600 leading-relaxed mb-7">
+                  Implanté à Cocody (10e Tranche) en bordure de route, à 15
+                  minutes du CHU d'Angré et 15 minutes de l'autoroute Y4,{" "}
+                  <strong>Ivoire Horizons Angré</strong> est un immeuble mixte
+                  R+3 au design contemporain : signature architecturale
+                  distinctive en brise-soleil, locaux commerciaux au
+                  rez-de-chaussée et lots résidentiels du studio au penthouse
+                  d'exception.
+                </p>
+                <p className="text-lg text-slate-600 leading-relaxed mb-7">
+                  Le chantier est bien avancé : la dernière dalle est déjà
+                  coulée, le gros œuvre est achevé et le second œuvre est
+                  d'ores et déjà bien engagé. Des visites collectives sont
+                  organisées toutes les 2 à 3 semaines.
+                </p>
+              </div>
+
+              {/* Expanded Photo Gallery */}
+              <Gallerie handleImageClick={handleImageClick} images={images} />
+              {/* Location Map Section */}
+              <Localisation
+                coordinates="5.3970,-3.9750"
+                mapEmbedSrc="https://www.google.com/maps?q=5.3970,-3.9750&output=embed"
+                mapTitle="Carte d'emplacement d'Ivoire Horizons Angré à Cocody"
+                subtitle="À 15 minutes du CHU d'Angré et 15 minutes de l'autoroute Y4."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {modalOpen && (
+        <ModalGallery
+          setModalOpen={setModalOpen}
+          handleImageClick={handleImageClick}
+          imageSelected={imageSelected}
+          galleryImages={images}
+        />
+      )}
+    </section>
+  );
+};
+
+/* ---------------- Section : Ivoire Gardens ---------------- */
+
+const IvoireGardensSection = ({ images, openContact }) => {
+  const [videoPlayed, setVideoPlayed] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [imageSelected, setImageSelected] = useState(null);
+
+  const handleImageClick = (index) => {
+    setImageSelected(index);
+    setModalOpen(true);
+  };
+
+  return (
+    <section id="ivoire-gardens" className="py-10 lg:py-24 bg-slate-50">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="text-center mb-10 lg:mb-16">
+          <h2 className="text-3xl lg:text-5xl font-bold text-slate-900">
+            Ivoire Gardens
+          </h2>
+        </div>
+
+        <div className="lg:hidden">
+          <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3 lg:mb-6">
+            Présentation du Projet
+          </h3>
+          <p className="lg:text-lg text-slate-600 leading-relaxed mb-7">
+            Situé à 10 minutes d'Assinie, ce projet d'exception offre une
+            opportunité rare d'investissement dans l'une des zones les plus
+            prisées de la Côte d'Ivoire. <strong>Ivoire Gardens </strong>
+            allie une zone commerciale dynamique à un quartier résidentiel
+            haut de gamme.
+          </p>
+
+          <div className="mb-10 lg:hidden">
+            <div
+              className="rounded-[10px] h-[250px] md:h-[380px] lg:max-w-[70%] mx-auto relative before:absolute before:bg-linear-to-br before:from-primary/80  before:to-secondary/30 before:inset-0 before:rounded-[10px] before:z-1  cursor-pointer "
+              onClick={() => setVideoPlayed(true)}
+            >
+              {videoPlayed ? (
+                <div className="z-10 relative w-full h-full">
+                  <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-70 rounded-[10px]">
+                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                  <iframe
+                    src={`https://www.youtube.com/embed//wn9VY43-XSI?autoplay=1&modestbranding=1&rel=0`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full rounded-[10px] absolute inset-0 z-20"
+                    title={"Video Explicative TIMUTECH"}
+                    onLoad={(e) => {
+                      e.target.previousSibling.style.display = "none";
+                    }}
+                  ></iframe>
+                </div>
+              ) : (
+                <div className="relative w-full h-full">
+                  <img
+                    className="rounded-[10px] h-full w-full object-cover "
+                    src={Cite}
+                    alt="Présentation vidéo du projet Ivoire Gardens Assinie"
+                  />
+                  <div className="absolute   top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-[30px]    ">
+                    <div className=" w-[30%] mx-auto relative after:absolute after:border-[1.2px] after:border-slate-100  after:-inset-1   after:animate-[ping_1.2s_ease_infinite] after:rounded-full ">
+                      <img
+                        src={YoutubeIcon}
+                        className="w-full   mx-auto  "
+                        alt="Lire la vidéo Ivoire Gardens"
+                      />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-6 left-6 z-10">
+                    <div className="px-4 py-2 bg-black/90 rounded-lg z-10">
+                      <p className="text-[12px] text-white font-medium">
+                        Voir la présentation vidéo
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
+          {/* Project Specs Sidebar */}
+          <div className="lg:w-1/3 lg:sticky top-24 w-full">
+            <div className="bg-white p-5 lg:p-8 rounded-2xl border border-slate-100 shadow-sm">
+              <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-2">
+                Ivoire Gardens
+              </h2>
+              <p className="text-teal-600 font-medium mb-5 lg:mb-8 flex items-center gap-2">
+                <MapPin className="w-4 h-4" /> Assinie-Mafia, Côte d'Ivoire
+              </p>
+
+              <div className=" space-y-4 lg:space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-slate-50 shadow-sm flex items-center justify-center text-teal-600">
+                    <Home className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
+                      Surface Totale
+                    </p>
+                    <p className="text-slate-900 font-bold">10 033 m²</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-slate-50 shadow-sm flex items-center justify-center text-teal-600">
+                    <Building2 className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
+                      Unités
+                    </p>
+                    <p className="text-slate-900 font-bold">
+                      24 Villas + 16 Magasins
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-slate-50 shadow-sm flex items-center justify-center text-teal-600">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
+                      Commodités
+                    </p>
+                    <p className="text-slate-900 font-bold">
+                      Piscine, Sécurité 24/7
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <hr className=" my-5 lg:my-8 border-slate-200" />
+
+              <div className="space-y-4">
+                <a
+                  href="/Ivoiregardens.pdf"
+                  download="Brochure Ivoire Gardens.pdf"
+                  className="mb-3 block"
+                >
+                  <button className="w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-colors flex items-center justify-center gap-2 group cursor-pointer">
+                    <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
+                    Télécharger la Brochure
+                  </button>
+                </a>
+
+                <button
+                  onClick={openContact}
+                  className="w-full py-3 border-2 border-teal-600  text-slate-800 rounded-xl font-bold hover:bg-teal-600  cursor-pointer transition-all hover:text-white  flex items-center justify-center gap-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  Contactez le conseiller
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Project Content */}
+          <div className="mx-auto lg:mx-0 lg:w-2/3">
+            <div className="mx-auto ">
+              <div className="hidden lg:block">
+                <h3 className="text-4xl font-bold text-slate-900 mb-6">
+                  Présentation du Projet
+                </h3>
+                <p className="text-lg text-slate-600 leading-relaxed mb-7">
+                  Situé à Assinie, ce projet d'exception offre une opportunité
+                  rare d'investissement dans l'une des zones les plus prisées
+                  de la Côte d'Ivoire. <strong>Ivoire Gardens </strong>
+                  allie une zone commerciale dynamique à un quartier
+                  résidentiel haut de gamme.
+                </p>
+              </div>
+
+              {/* Video Feature */}
+              <div className="mb-10 hidden lg:block">
+                <div
+                  className="rounded-[10px] h-[380px] max-w-[70%] mx-auto relative before:absolute before:bg-linear-to-br before:from-primary/80  before:to-secondary/30 before:inset-0 before:rounded-[10px] before:z-1  cursor-pointer "
+                  onClick={() => setVideoPlayed(true)}
+                >
+                  {videoPlayed ? (
+                    <div className="z-10 relative w-full h-full">
+                      <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-70 rounded-[10px]">
+                        <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                      <iframe
+                        src={`https://www.youtube.com/embed//wn9VY43-XSI?autoplay=1&modestbranding=1&rel=0`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full rounded-[10px] absolute inset-0 z-20"
+                        title={"Video Explicative TIMUTECH"}
+                        onLoad={(e) => {
+                          e.target.previousSibling.style.display = "none";
+                        }}
+                      ></iframe>
+                    </div>
+                  ) : (
+                    <div className="relative w-full h-full">
+                      <img
+                        className="rounded-[10px] h-full w-full object-cover "
+                        src={Cite}
+                        alt="Vue aérienne du projet immobilier Ivoire Gardens à Assinie"
+                      />
+                      <div className="absolute   top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-[30px]    ">
+                        <div className=" w-[20%] mx-auto relative after:absolute after:border-[1.2px] after:border-slate-100  after:-inset-1   after:animate-[ping_1.2s_ease_infinite] after:rounded-full ">
+                          <img
+                            src={YoutubeIcon}
+                            className="w-full   mx-auto  "
+                            alt="Icône de lecture de la vidéo"
+                          />
+                        </div>
+                      </div>
+                      <div className="absolute bottom-6 left-6 z-10">
+                        <div className="px-4 py-2 bg-black/90 rounded-lg z-10">
+                          <p className="text-white font-medium">
+                            Voir la présentation vidéo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Expanded Photo Gallery */}
+              <Gallerie handleImageClick={handleImageClick} images={images} />
+              {/* Location Map Section */}
+              <Localisation />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {modalOpen && (
+        <ModalGallery
+          setModalOpen={setModalOpen}
+          handleImageClick={handleImageClick}
+          imageSelected={imageSelected}
+          galleryImages={images}
+        />
+      )}
+    </section>
+  );
+};
+
+/* ---------------- Page ---------------- */
+
 const PromotionPage = () => {
   useSEO({
-    title: "Promotion Immobilière | Ivoire Gardens Assinie - Ivoire Bauhaus",
+    title:
+      "Promotion Immobilière | Ivoire Horizons Angré & Ivoire Gardens - Ivoire Bauhaus",
     description:
-      "Découvrez Ivoire Gardens à Assinie-Mafia : 24 villas haut de gamme, 16 magasins, piscine et sécurité 24/7. Investissez dans l'immobilier en Côte d'Ivoire avec Ivoire Bauhaus.",
+      "Découvrez nos programmes immobiliers en Côte d'Ivoire : Ivoire Horizons Angré à Cocody et Ivoire Gardens à Assinie-Mafia. Investissez avec Ivoire Bauhaus.",
     keywords:
-      "Ivoire Gardens, villa Assinie, promotion immobilière Abidjan, investissement immobilier Côte d'Ivoire, achat villa Côte d'Ivoire, promoteur immobilier Abidjan, résidence haut de gamme Assinie",
+      "Ivoire Horizons Angré, Ivoire Gardens, villa Assinie, appartement Cocody, promotion immobilière Abidjan, investissement immobilier Côte d'Ivoire, promoteur immobilier Abidjan",
     path: "/promotionimmobiliere",
   });
-  const [videoPlayed, setVideoPlayed] = useState(false);
+
   const dispatch = useDispatch();
   const { imagesRedux } = useSelector((state) => state.projet);
 
-  const imageImmoPage = imagesRedux.filter(
+  const imageAngrePage = imagesRedux.filter(
+    (img) => img.folder === "ivoire_horizons_angre",
+  );
+  const imageGardensPage = imagesRedux.filter(
     (img) => img.folder === "promotion_immobiliere",
   );
 
   useEffect(() => {
-    if (imageImmoPage.length === 0) {
+    if (imagesRedux.length === 0) {
       getAllImages().then((res) => {
         dispatch(setImages(res));
       });
@@ -53,37 +513,8 @@ const PromotionPage = () => {
     if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
-  const steps = [
-    {
-      title: "Découverte du projet",
-      desc: "Consultation de la brochure, visite virtuelle et analyse de l'emplacement stratégique à Assinie.",
-      icon: <LayoutGrid className="w-6 h-6" />,
-    },
-    {
-      title: "Prise de contact",
-      desc: "Rencontrez notre équipe pour discuter de vos besoins et obtenir toutes les informations personnalisées.",
-      icon: <Phone className="w-6 h-6" />,
-    },
-    {
-      title: "Réservation",
-      desc: "Signature du contrat de réservation et versement du premier acompte pour sécuriser votre bien.",
-      icon: <ShieldCheck className="w-6 h-6" />,
-    },
-    {
-      title: "Suivi du processus",
-      desc: "Accompagnement administratif et technique jusqu'à la remise des clés de votre propriété.",
-      icon: <CheckCircle2 className="w-6 h-6" />,
-    },
-  ];
-
-  const [modalOpen, setModalOpen] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
-  const [imageSelected, setImageSelected] = useState(null);
-
-  const handleImageClick = (index) => {
-    setImageSelected(index);
-    setModalOpen(true);
-  };
+  const openContact = () => setContactModalOpen(true);
 
   return (
     <div className="bg-white font-sans selection:bg-teal-100 selection:text-teal-900">
@@ -95,12 +526,6 @@ const PromotionPage = () => {
 
         <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
           <div className="max-w-4xl">
-            {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/30 mb-6">
-              <ShieldCheck className="w-5 h-5 text-teal-400" />
-              <span className="text-teal-400 text-[12px] lg:text-sm font-bold tracking-widest uppercase italic">
-                Promoteur Immobilier Agréé
-              </span>
-            </div> */}
             <h1 className="text-4xl lg:text-7xl font-extrabold text-white mb-4 lg:mb-8 leading-tight">
               Bâtir l'Excellence, <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-teal-400 to-emerald-400">
@@ -112,240 +537,25 @@ const PromotionPage = () => {
               espaces de vie où modernité rime avec sérénité.
             </p>
             <button
-              onClick={() => scrollTo("project")}
+              onClick={() => scrollTo("ivoire-horizons-angre")}
               className="px-8 py-4 bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-500 transition-all flex items-center gap-2 group mx-auto md:mx-0"
             >
-              Découvrir Ivoire Gardens
+              Découvrir nos projets
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>
       </section>
 
-      {/* 2. IVOIRE GARDENS ASSINIE SECTION */}
-      <section id="project" className="py-10 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className=" lg:hidden">
-            <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3 lg:mb-6">
-              Présentation du Projet
-            </h3>
-            <p className="lg:text-lg text-slate-600 leading-relaxed mb-7">
-              Situé à 10 minutes d'Assinie, ce projet d'exception offre une
-              opportunité rare d'investissement dans l'une des zones les plus
-              prisées de la Côte d'Ivoire. <strong>Ivoire Gardens </strong>
-              allie une zone commerciale dynamique à un quartier résidentiel
-              haut de gamme.
-            </p>
-
-            <div className="mb-10  lg:hidden">
-              <div
-                className="rounded-[10px] h-[250px] md:h-[380px] lg:max-w-[70%] mx-auto relative before:absolute before:bg-linear-to-br before:from-primary/80  before:to-secondary/30 before:inset-0 before:rounded-[10px] before:z-1  cursor-pointer "
-                onClick={() => setVideoPlayed(true)}
-              >
-                {videoPlayed ? (
-                  <div className="z-10 relative w-full h-full">
-                    {/* Loading indicator */}
-                    <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-70 rounded-[10px]">
-                      <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-                    </div>
-                    <iframe
-                      src={`https://www.youtube.com/embed//wn9VY43-XSI?autoplay=1&modestbranding=1&rel=0`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full rounded-[10px] absolute inset-0 z-20"
-                      title={"Video Explicative TIMUTECH"}
-                      onLoad={(e) => {
-                        // Hide the loading indicator when iframe is loaded
-                        e.target.previousSibling.style.display = "none";
-                      }}
-                    ></iframe>
-                  </div>
-                ) : (
-                  <div className="relative w-full h-full">
-                    <img
-                      className="rounded-[10px] h-full w-full object-cover "
-                      src={Cite}
-                      alt="Présentation vidéo du projet Ivoire Gardens Assinie"
-                    />
-                    <div className="absolute   top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-[30px]    ">
-                      <div className=" w-[30%] mx-auto relative after:absolute after:border-[1.2px] after:border-slate-100  after:-inset-1   after:animate-[ping_1.2s_ease_infinite] after:rounded-full ">
-                        <img
-                          src={YoutubeIcon}
-                          className="w-full   mx-auto  "
-                          alt="Lire la vidéo Ivoire Gardens"
-                        />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-6 left-6 z-10">
-                      <div className="px-4 py-2 bg-black/90 rounded-lg z-10">
-                        <p className="text-[12px] text-white font-medium">
-                          Voir la présentation vidéo
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
-            {/* Project Specs Sidebar */}
-            <div className="lg:w-1/3 lg:sticky top-24 w-full">
-              <div className="bg-slate-50 p-5 lg:p-8 rounded-2xl border border-slate-100 shadow-sm">
-                <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-2">
-                  Ivoire Gardens
-                </h2>
-                <p className="text-teal-600 font-medium mb-5 lg:mb-8 flex items-center gap-2">
-                  <MapPin className="w-4 h-4" /> Assinie-Mafia, Côte d'Ivoire
-                </p>
-
-                <div className=" space-y-4 lg:space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-teal-600">
-                      <Home className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
-                        Surface Totale
-                      </p>
-                      <p className="text-slate-900 font-bold">10 033 m²</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-teal-600">
-                      <Building2 className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
-                        Unités
-                      </p>
-                      <p className="text-slate-900 font-bold">
-                        24 Villas + 16 Magasins
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-teal-600">
-                      <Users className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">
-                        Commodités
-                      </p>
-                      <p className="text-slate-900 font-bold">
-                        Piscine, Sécurité 24/7
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <hr className=" my-5 lg:my-8 border-slate-200" />
-
-                <div className="space-y-4">
-                  <a
-                    href="/Ivoiregardens.pdf"
-                    download="Brochure Ivoire Gardens.pdf"
-                    className="mb-3 block"
-                  >
-                    <button className="w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-colors flex items-center justify-center gap-2 group cursor-pointer">
-                      <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
-                      Télécharger la Brochure
-                    </button>
-                  </a>
-
-                  <button
-                    onClick={() => setContactModalOpen(true)}
-                    className="w-full py-3 border-2 border-teal-600  text-slate-800 rounded-xl font-bold hover:bg-teal-600  cursor-pointer transition-all hover:text-white  flex items-center justify-center gap-2"
-                  >
-                    <Phone className="w-5 h-5" />
-                    Contactez le conseiller
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Project Content */}
-            <div className="mx-auto lg:mx-0 lg:w-2/3">
-              <div className="mx-auto ">
-                <div className="hidden lg:block">
-                  <h3 className="text-4xl font-bold text-slate-900 mb-6">
-                    Présentation du Projet
-                  </h3>
-                  <p className="text-lg text-slate-600 leading-relaxed mb-7">
-                    Situé à Assinie, ce projet d'exception offre une opportunité
-                    rare d'investissement dans l'une des zones les plus prisées
-                    de la Côte d'Ivoire. <strong>Ivoire Gardens </strong>
-                    allie une zone commerciale dynamique à un quartier
-                    résidentiel haut de gamme.
-                  </p>
-                </div>
-
-                {/* Video Feature */}
-                <div className="mb-10 hidden lg:block">
-                  <div
-                    className="rounded-[10px] h-[380px] max-w-[70%] mx-auto relative before:absolute before:bg-linear-to-br before:from-primary/80  before:to-secondary/30 before:inset-0 before:rounded-[10px] before:z-1  cursor-pointer "
-                    onClick={() => setVideoPlayed(true)}
-                  >
-                    {videoPlayed ? (
-                      <div className="z-10 relative w-full h-full">
-                        {/* Loading indicator */}
-                        <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-70 rounded-[10px]">
-                          <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                        <iframe
-                          src={`https://www.youtube.com/embed//wn9VY43-XSI?autoplay=1&modestbranding=1&rel=0`}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full rounded-[10px] absolute inset-0 z-20"
-                          title={"Video Explicative TIMUTECH"}
-                          onLoad={(e) => {
-                            // Hide the loading indicator when iframe is loaded
-                            e.target.previousSibling.style.display = "none";
-                          }}
-                        ></iframe>
-                      </div>
-                    ) : (
-                      <div className="relative w-full h-full">
-                        <img
-                          className="rounded-[10px] h-full w-full object-cover "
-                          src={Cite}
-                          alt="Vue aérienne du projet immobilier Ivoire Gardens à Assinie"
-                        />
-                        <div className="absolute   top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-[30px]    ">
-                          <div className=" w-[20%] mx-auto relative after:absolute after:border-[1.2px] after:border-slate-100  after:-inset-1   after:animate-[ping_1.2s_ease_infinite] after:rounded-full ">
-                            <img
-                              src={YoutubeIcon}
-                              className="w-full   mx-auto  "
-                              alt="Icône de lecture de la vidéo"
-                            />
-                          </div>
-                        </div>
-                        <div className="absolute bottom-6 left-6 z-10">
-                          <div className="px-4 py-2 bg-black/90 rounded-lg z-10">
-                            <p className="text-white font-medium">
-                              Voir la présentation vidéo
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Expanded Photo Gallery */}
-                <Gallerie
-                  handleImageClick={handleImageClick}
-                  images={imageImmoPage}
-                />
-                {/* Location Map Section */}
-                <Localisation />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 2. PROJETS */}
+      <IvoireHorizonsAngreSection
+        images={imageAngrePage}
+        openContact={openContact}
+      />
+      <IvoireGardensSection
+        images={imageGardensPage}
+        openContact={openContact}
+      />
 
       {/* 3. ACQUISITION PROCESS */}
       <section className="py-12 lg:py-24 bg-slate-900 text-white relative overflow-hidden">
@@ -426,20 +636,12 @@ const PromotionPage = () => {
           Notre équipe vous accompagne à chaque étape.
         </p>
         <button
-          onClick={() => setContactModalOpen(true)}
+          onClick={openContact}
           className="px-10 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800"
         >
           Contacter le conseiller
         </button>
       </section>
-      {modalOpen && (
-        <ModalGallery
-          setModalOpen={setModalOpen}
-          handleImageClick={handleImageClick}
-          imageSelected={imageSelected}
-          galleryImages={imageImmoPage}
-        />
-      )}
 
       {contactModalOpen && (
         <ModalContact setContactModalOpen={setContactModalOpen} />

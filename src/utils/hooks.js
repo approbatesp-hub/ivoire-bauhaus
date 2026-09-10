@@ -9,8 +9,8 @@ export const resizeFile = (file) =>
 
     Resizer.imageFileResizer(
       file,
-      500,
-      500,
+      1600,
+      1600,
       outputFormat,
       90,
       0,
@@ -27,8 +27,8 @@ export const resizeFile = (file) =>
           .catch(reject);
       },
       "base64",
-      500,
-      500
+      1600,
+      1600
     );
   });
 
@@ -67,7 +67,12 @@ export const getImagesByFolder = async (folder) => {
 };
 
 export const getAllImages = async () => {
-  const folders = ["page_accueil", "promotion_immobiliere", "communication"];
+  const folders = [
+    "page_accueil",
+    "promotion_immobiliere",
+    "ivoire_horizons_angre",
+    "communication",
+  ];
   let all = [];
 
   for (const folder of folders) {

@@ -24,6 +24,7 @@ const EditImages = () => {
   const [openSections, setOpenSections] = useState({
     landing: true,
     promotion: true,
+    angre: true,
     univ: true,
   });
 
@@ -54,6 +55,7 @@ const EditImages = () => {
     const FOLDER_TO_SECTION = {
       page_accueil: "landing",
       promotion_immobiliere: "promotion",
+      ivoire_horizons_angre: "angre",
       communication: "univ",
     };
 
@@ -96,6 +98,7 @@ const EditImages = () => {
     const folderMap = {
       landing: "page_accueil",
       promotion: "promotion_immobiliere",
+      angre: "ivoire_horizons_angre",
       univ: "communication",
     };
 
@@ -179,6 +182,7 @@ const EditImages = () => {
       emerald:
         "bg-emerald-50 text-emerald-600 border-emerald-400 text-emerald-400",
       purple: "bg-purple-50 text-purple-600 border-purple-400 text-purple-400",
+      amber: "bg-amber-50 text-amber-600 border-amber-400 text-amber-400",
     };
 
     const color =
@@ -281,13 +285,39 @@ const EditImages = () => {
     );
   };
 
+  const SECTION_COLOR_CLASSES = {
+    blue: {
+      iconBg: "bg-gradient-to-br from-blue-500 to-blue-600",
+      header:
+        "bg-linear-to-r from-blue-50 to-blue-25 hover:from-blue-100 hover:to-blue-50",
+      icon: "text-blue-600",
+    },
+    emerald: {
+      iconBg: "bg-gradient-to-br from-emerald-500 to-emerald-600",
+      header:
+        "bg-linear-to-r from-emerald-50 to-emerald-25 hover:from-emerald-100 hover:to-emerald-50",
+      icon: "text-emerald-600",
+    },
+    purple: {
+      iconBg: "bg-gradient-to-br from-purple-500 to-purple-600",
+      header:
+        "bg-linear-to-r from-purple-50 to-purple-25 hover:from-purple-100 hover:to-purple-50",
+      icon: "text-purple-600",
+    },
+    amber: {
+      iconBg: "bg-gradient-to-br from-amber-500 to-amber-600",
+      header:
+        "bg-linear-to-r from-amber-50 to-amber-25 hover:from-amber-100 hover:to-amber-50",
+      icon: "text-amber-600",
+    },
+  };
+
   const SectionAccordion = ({ section }) => {
     const isOpen = openSections[section.id];
-    const color = section.color;
-    // console.log(color);
-    const iconBgColor = `bg-gradient-to-br from-${color}-500 to-${color}-600`;
-    const headerBgColor = `bg-linear-to-r from-${color}-50 to-${color}-25 hover:from-${color}-100 hover:to-${color}-50`;
-    const iconColor = `text-${color}-600`;
+    const colorClasses = SECTION_COLOR_CLASSES[section.color];
+    const iconBgColor = colorClasses.iconBg;
+    const headerBgColor = colorClasses.header;
+    const iconColor = colorClasses.icon;
 
     return (
       <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">

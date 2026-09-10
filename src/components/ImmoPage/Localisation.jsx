@@ -1,16 +1,16 @@
 import { MapPin, Navigation, Maximize2 } from "lucide-react";
 import { useState } from "react";
 
-const Localisation = () => {
+const Localisation = ({
+  coordinates = "5.1756349948,-3.5358249250",
+  mapEmbedSrc = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3973.551232711869!2d-3.5358249250175624!3d5.175634994801823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sci!4v1767877024186!5m2!1sfr!2sci",
+  mapTitle = "Carte d'emplacement d'Ivoire Gardens à Assinie",
+  subtitle = "Cité située à seulement 45 minutes d'Abidjan.",
+}) => {
   const [mapLoaded, setMapLoaded] = useState(false);
 
-  const locationData = {
-    address: "Assinie-Mafia, Lagunes, Côte d'Ivoire",
-    coordinates: "5.1756349948,-3.5358249250",
-  };
-
   const handleDirections = () => {
-    const url = `https://www.google.com/maps/dir/?api=1&destination=${locationData.coordinates}`;
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${coordinates}`;
     window.open(url, "_blank");
   };
 
@@ -56,7 +56,7 @@ const Localisation = () => {
             </div>
 
             <p className="text-slate-300 text-sm mt-4 lg:max-w-2xl">
-              Cité située à seulement 45 minutes d'Abidjan.
+              {subtitle}
             </p>
           </div>
 
@@ -70,12 +70,12 @@ const Localisation = () => {
 
             <div className="relative h-[200px] md:h-[350px] w-full rounded-2xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3973.551232711869!2d-3.5358249250175624!3d5.175634994801823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sci!4v1767877024186!5m2!1sfr!2sci"
+                src={mapEmbedSrc}
                 className="w-full h-full"
                 style={{ border: 0 }}
                 loading="lazy"
                 allowFullScreen
-                title="Carte d'emplacement d'Ivoire Gardens à Assinie"
+                title={mapTitle}
                 referrerPolicy="no-referrer-when-downgrade"
                 onLoad={() => setMapLoaded(true)}
               />
