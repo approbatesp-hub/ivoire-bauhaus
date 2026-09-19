@@ -76,8 +76,7 @@ const IvoireHorizonsAngreSection = ({ images, openContact }) => {
             Présentation du Projet
           </h3>
           <p className="lg:text-lg text-slate-600 leading-relaxed mb-7">
-            Implanté à Cocody (10e Tranche) en bordure de route, à 15 minutes
-            du CHU d'Angré et 15 minutes de l'autoroute Y4,{" "}
+            Implanté à Cocody (10e Tranche) en bordure de route,{" "}
             <strong>Ivoire Horizons Angré</strong> est un immeuble mixte R+3
             au design contemporain, avec des locaux commerciaux au
             rez-de-chaussée et des lots résidentiels du studio au penthouse.
@@ -187,8 +186,7 @@ const IvoireHorizonsAngreSection = ({ images, openContact }) => {
                   Présentation du Projet
                 </h3>
                 <p className="text-lg text-slate-600 leading-relaxed mb-7">
-                  Implanté à Cocody (10e Tranche) en bordure de route, à 15
-                  minutes du CHU d'Angré et 15 minutes de l'autoroute Y4,{" "}
+                  Implanté à Cocody (10e Tranche) en bordure de route,{" "}
                   <strong>Ivoire Horizons Angré</strong> est un immeuble mixte
                   R+3 au design contemporain : signature architecturale
                   distinctive en brise-soleil, locaux commerciaux au
@@ -207,10 +205,10 @@ const IvoireHorizonsAngreSection = ({ images, openContact }) => {
               <Gallerie handleImageClick={handleImageClick} images={images} />
               {/* Location Map Section */}
               <Localisation
-                coordinates="5.3970,-3.9750"
-                mapEmbedSrc="https://www.google.com/maps?q=5.3970,-3.9750&output=embed"
+                coordinates="5.4405617,-3.9254585"
+                mapEmbedSrc="https://www.google.com/maps?q=5.4405617,-3.9254585&output=embed"
                 mapTitle="Carte d'emplacement d'Ivoire Horizons Angré à Cocody"
-                subtitle="À 15 minutes du CHU d'Angré et 15 minutes de l'autoroute Y4."
+                subtitle="Cocody Angré, 10ème tranche"
               />
             </div>
           </div>
